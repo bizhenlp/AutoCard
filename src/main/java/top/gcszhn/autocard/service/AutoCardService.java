@@ -219,7 +219,7 @@ public class AutoCardService implements AppService {
             String page = getPage();
             if (!appConfig.isTestMode() && isSubmited(page)) {
                 statusCode.setStatus(1);
-                statusCode.setMessage(realName+"您好，今日已经打卡了，请明天再来");
+                statusCode.setMessage("盈盈今天已经帮你打卡了唉，明天再来找我好不好");
                 LogUtils.printMessage(statusCode.getMessage(), LogUtils.Level.ERROR);
                 return statusCode;
             }
@@ -258,7 +258,7 @@ public class AutoCardService implements AppService {
                 }
             }
 
-            String message = String.format("%s，你好，今日自动健康打卡状态：%s，打卡地区为：%s（如若区域不符，请次日手动打卡更改地址）",
+            String message = String.format("%s 不要赖床哦！今日自动健康打卡状态：%s，打卡地区为：%s（如若区域不符，请次日手动打卡更改地址）",
                 realName,
                 resp.getString("m"),
                 area);
