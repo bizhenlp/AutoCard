@@ -6,7 +6,6 @@ on:
   push:
     branches: [ main ]
   
-  
   schedule:
     # UTC 01:00 和 UTC 04:00
     - cron: '30 0,22 * * *'
